@@ -1,0 +1,89 @@
+using System;
+
+namespace practicas
+{
+    class banco
+    {
+
+        float monto;
+        float cantidad;
+        float suma;
+        int contador;
+        int salir;
+
+    
+
+        public void depositar()
+        {
+            monto = monto + cantidad;
+        }
+
+        public void retirar()
+        {
+            monto = monto - cantidad;
+        }
+
+
+        public static void Main()
+        {
+            banco a = new banco();
+            int numerocliente = 1;
+            int desicion;
+
+            while (a.contador <= 2)
+            {
+            a.contador = a.contador + 1;
+
+            Console.WriteLine("Bienvenido cliente número "+numerocliente);
+
+            Console.WriteLine("Qué desea realizar? Un depósito o un retiro? ");
+            Console.WriteLine("Escriba 1 si va a realizar un depósito, de lo contrario escriba 2 ");
+            desicion =int.Parse( Console.ReadLine());
+
+
+            if(desicion <= 0 || desicion > 2)
+            {
+                Console.WriteLine("Digite un número del rango dado ");
+
+            }
+
+            else if(desicion == 1)
+            {
+                    a.monto = 50000;
+                Console.WriteLine("Ingrese el monto que desee depositar ");
+                a.cantidad = int.Parse(Console.ReadLine()); 
+                a.depositar();
+
+                    Console.WriteLine("Este es su estado de cuenta $" +a.monto);
+                    a.suma = a.suma + a.cantidad;
+
+
+                }
+
+            else if (desicion == 2)
+            {
+                    a.monto = 50000;
+                    Console.WriteLine("Ingrese el monto que desee retirar ");
+                a.cantidad = int.Parse(Console.ReadLine());
+                a.retirar();
+                    Console.WriteLine("Este es su estado de cuenta $" + a.monto);
+
+                }
+
+                numerocliente = numerocliente + 1;
+
+                Console.WriteLine("Escriba el número 3 para salir ");
+                a.salir = int.Parse(Console.ReadLine());
+
+                if (a.salir == 3) 
+                { 
+                Console.WriteLine("¡Gracias por preferirnos, cliente número " +numerocliente+ "!");
+                Console.Clear();
+                }
+
+        }
+            Console.WriteLine("Este es el monto equivalente a todas las depositaciones del día de hoy $" + a.suma);
+
+        }
+    }
+}
