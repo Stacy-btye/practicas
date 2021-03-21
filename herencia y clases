@@ -1,0 +1,61 @@
+//EJERCICIO1
+
+//using System;
+
+//namespace practicas
+//{
+
+//    class Program
+//    {
+//        public static void Main()
+//        {
+//            persona p = new persona();
+//            Profesor pro = new Profesor();
+
+//            Console.WriteLine("Datos iniciales: ");
+//            p.MostrarEstado();
+
+
+//            Console.WriteLine("Datos del profesor: ");
+//            pro.MostrarEstado2();
+
+//        }
+//    }
+
+//}
+
+
+
+//public class persona
+//{
+//    public string nombre = "Stacy";
+//    public string apellido = "Morales";
+//    public long cedula = 402345643217;
+//    public int edad = 18;
+
+
+
+//    public void MostrarEstado()
+//    {
+
+//        Console.WriteLine("Nombre: " + nombre);
+//        Console.WriteLine("Apellido: " + apellido);
+//        Console.WriteLine("Cédula: " + cedula);
+//        Console.WriteLine("Edad: " + edad);
+
+//    }
+
+
+
+//}
+
+//public class Profesor : persona
+//{
+//    public int sueldo = 30000;
+//    public void MostrarEstado2()
+//    {
+
+//        Console.WriteLine("Sueldo: {0}" + sueldo);
+
+//    }
+//}
