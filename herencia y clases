@@ -66,7 +66,70 @@
 
 
 
+//EJERCICIO2
+//using System;
 
+//namespace practicas
+//{
+
+//    class Probarcontacto
+//    {
+//        static void Main()
+//        {
+//            contacto tt = new contacto();
+//            tt.Setcontacto("Stacy", "Morales", "809-123-4321", "Calle 4 #42 Los Alcarrizos");
+
+//            tt.Saludar();
+//            Console.WriteLine("Saludénse");
+//            Console.Read();
+//            Console.WriteLine("");
+
+//            Console.WriteLine("Mucho gusto. Adiós.");
+
+
+//        }
+
+
+//    }
+
+
+
+//    public class contacto
+//    {
+//        public string nombre;
+//        public string apellido;
+//        public string telefono;
+//        public string direccion;
+
+
+
+
+
+//       public void Setcontacto(string a, string b, string c, string d)
+//        {
+
+//            nombre = a;
+//            apellido = b;
+//            telefono = c;
+//            direccion = d;
+
+//        }
+
+
+//        public void Saludar()
+//        {
+
+//            Console.WriteLine("Hola, soy " + nombre + " y mi apellido es " + apellido+ ".Mi número de teléfono es" + telefono+ " y mi dirección " + direccion+ ".");
+//            Console.WriteLine("");
+//        }
+
+
+//    }
+
+
+
+
+//}
 
 
 
