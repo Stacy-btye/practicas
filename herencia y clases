@@ -59,3 +59,70 @@
 
 //    }
 //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//EJERCICIO3
+//using System;
+
+//namespace practicas
+//{
+
+//        class Herencia
+//        {
+//            static void Main(string[] args)
+//            {
+//                C clase = new C();
+//                Console.ReadKey();
+//            }
+//        }
+
+//        public class A
+//        {
+//            public A()
+//            {
+//                Console.WriteLine("Clase A");
+//            }
+//        }
+
+//        public class B : A
+//        {
+//            public B()
+//            {
+//                Console.WriteLine("Clase B");
+//            }
+//        }
+
+//        public class C : B
+//        {
+//            public C()
+//            {
+//                Console.WriteLine("Clase C");
+//            }
+//        }
+
+       
+//    }
