@@ -1,0 +1,71 @@
+//EJERCICIO2
+
+//using System;
+
+//namespace practicas
+//{
+   
+//    class Nomina
+//    {
+//        string[] Nombres = new string[5];
+//        int[] Salario = new int[5];
+
+//        String nombreMayor;
+//        int mayorSueldo;
+
+//        public void Cargar()
+//        {
+
+//            for (int i = 0; i < Nombres.Length; i++)
+//            {
+
+//                Console.WriteLine("Ingrese el nombre del empleado");
+//                Nombres[i] = Console.ReadLine();
+
+//                Console.WriteLine("Ingrese su salario");
+//                Salario[i] = int.Parse(Console.ReadLine());
+
+//                Console.Clear();
+
+//            }
+//        }
+
+//        public void SalarioMayor()
+//        {
+            
+//                int i = 0;
+
+
+//                mayorSueldo = Salario[i];
+//                nombreMayor = Nombres[i];
+
+
+//                for (i = 0; i < 5; i++)
+//                {
+
+//                    if (Salario[i] > mayorSueldo)
+//                    {
+//                        mayorSueldo = Salario[i];
+//                        nombreMayor = Nombres[i];
+
+//                    }
+
+
+//                }
+//            Console.WriteLine("El nombre del empleado con el salario mayor es " + nombreMayor);
+//            Console.WriteLine("Tiene un salario de: " + mayorSueldo);
+
+//        }
+
+//        static void Main()
+//        {
+//            Nomina tt = new Nomina();
+//            tt.Cargar();
+//            tt.SalarioMayor();
+
+//        }
+
+
+
+//    }
+// }
