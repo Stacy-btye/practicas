@@ -1,3 +1,166 @@
+//EJERCICIO
+
+//using System;
+
+//namespace maquinaexpendedora
+//{
+//    public class Productos
+//    {
+//        // Chocolate Crachi
+//        int precio1 = 5;
+//        int existencia1 = 5;
+
+//        // Cheetos
+//        int precio2 = 10;
+//        int existencia2 = 10;
+
+//        // Jugo 100% sin azúcar
+//        int precio3 = 25;
+//        int existencia3 = 10;
+
+//        // Sparkies
+//        int precio4 = 25;
+//        int existencia4 = 10;
+
+
+//        public void compra(int pago, int producto)
+//        {
+
+//            switch (producto)
+//            {
+//                case 1:
+//                    if (pago != precio1)
+//                    {
+//                        Console.WriteLine("El pago no se pudo realizar. ");
+//                    }
+//                    else
+//                    {
+//                        existencia1 = existencia1 - 1;
+//                    }
+//                    break;
+//                case 2:
+//                    if (pago != precio2)
+//                    {
+//                        Console.WriteLine("El pago no se pudo realizar. ");
+//                    }
+//                    else
+//                    {
+//                        existencia2 = existencia2 - 1;
+//                    }
+
+//                    break;
+
+//                case 3:
+//                    if (pago != precio3)
+//                    {
+//                        Console.WriteLine("El pago no se pudo realizar. ");
+//                    }
+//                    else
+//                    {
+//                        existencia3 = existencia3 - 1;
+//                    }
+
+//                    break;
+
+//                case 4:
+//                    if (pago != precio4)
+//                    {
+//                        Console.WriteLine("El pago no se pudo realizar. ");
+//                    }
+//                    else
+//                    {
+//                        existencia4 = existencia4 - 1;
+//                    }
+
+//                    break;
+//                default:
+//                    Console.WriteLine("Este producto no existe. ");
+//                    break;
+//            }
+//        }
+
+
+
+
+
+//        public void informe()
+//        {
+//            Console.WriteLine("Quedan " + existencia1+ " Crachis. ");
+//            Console.WriteLine("Quedan " + existencia2+ " Cheetos. ");
+//            Console.WriteLine("Quedan " + existencia1 + " jugos 100% sin azúcar. ");
+//            Console.WriteLine("Quedan " + existencia2 + " Sparkies. ");
+//        }
+
+
+
+
+
+//        public void Validacion(int pago)
+//        {
+//            if (pago == 500 || pago == 1000 || pago == 2000)
+//            {
+//                Console.WriteLine("Pago no acepato");
+
+
+//            }
+//            else
+//            {
+//                Console.WriteLine("Pago acepato");
+//            }
+//        }
+
+//    }
+
+
+
+//    class program
+//    {
+
+//        public static void Main(string[] args)
+//        {
+//            Productos t = new Productos();
+//            int cont = 1;
+
+//            while (cont == 1)
+//            {
+//                Console.WriteLine("¿Qué desea comprar el día de hoy?");
+//                Console.WriteLine("1) Crachis $5");
+//                Console.WriteLine("2) Cheetos $10");
+//                Console.WriteLine("1) Jugo 100% sin azúcar $25");
+//                Console.WriteLine("2) Sparkies $25");
+//                Console.WriteLine("0) Finalizar compra");
+
+//                int tt = int.Parse(Console.ReadLine());
+
+//                if (tt == 0)
+//                {
+//                    cont = 0;
+//                }
+//                else
+//                {
+//                    Console.WriteLine("Inserte el pago");
+//                    int ttt = int.Parse(Console.ReadLine());
+//                    t.Validacion(ttt);
+//                    t.compra(ttt, tt);
+//                }
+
+//            }
+
+
+//            t.informe();
+//        }
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
 //EJERCICIO2
 
 //using System;
