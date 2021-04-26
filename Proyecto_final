@@ -1,0 +1,107 @@
+//using System;
+
+//namespace maquinaexpendedora
+//{
+//    public class Prestamos
+//    {
+
+//        int monto, cuotas, porcentaje, contador = 0;
+        
+//        double interes, calculo_porcentaje, cal_cuo_men, cap_pend, abono_capital = 0;
+
+
+
+//        public void pedido ()
+//        {
+//            Console.WriteLine("x                    Bienvenido al sistema de prestamos                      x");
+//            Console.WriteLine("x                                                                            x");
+//            Console.WriteLine("x                                                                            x");
+//            Console.WriteLine("x                Ingresa la cantidad que desea tomar prestado:               x");
+//            Console.WriteLine("x                                                                            x");
+//            Console.WriteLine("x                                                                            x");
+//            monto = int.Parse(Console.ReadLine());
+//            Console.WriteLine("x    Ingresa la cantidad de cuotas en que va a pagar, expresada en meses:    x");
+//            Console.WriteLine("x                                                                            x");
+//            Console.WriteLine("x                                                                            x");
+
+//            cuotas = int.Parse(Console.ReadLine());
+
+//            Console.Clear();
+
+
+//            if (cuotas >= 18)
+//            {
+//                Console.WriteLine("Escriba la tasa de interés que le convenga más (sin el signo de porcentaje): ");
+
+
+//                Console.WriteLine(" 25%");
+//                Console.WriteLine(" 30%");
+//                Console.WriteLine(" 35%");
+//                porcentaje = int.Parse(Console.ReadLine());
+
+//                Console.Clear();
+//            }
+
+//            else
+//            {
+//                Console.WriteLine("Escriba la tasa de interés que le convenga más: ");
+
+
+//                Console.WriteLine(" 20%");
+//                Console.WriteLine(" 15%");
+//                Console.WriteLine(" 10%");
+//                porcentaje = int.Parse(Console.ReadLine());
+
+//                Console.Clear();
+
+//            }
+
+//        }
+
+
+//        public void calcular_tabla()
+//        {
+//            Console.WriteLine("Cantidad prestada: " +monto);
+//            Console.WriteLine("Tasa de interés: " + porcentaje);
+//            Console.WriteLine("Cantidad de cuotas, expresada en meses: " + cuotas);
+
+//            Console.WriteLine("                                                   Tabla de amoratización.     ");
+//            Console.WriteLine("||    Periodo    ||     Intereses     ||     Cuota fija    ||     Abono a capital       ||     Capital pendiente     ||");
+
+//            calculo_porcentaje = porcentaje / 100;
+           
+
+//            while (contador <= cuotas)
+//            {
+//                interes = monto * calculo_porcentaje;
+//                cal_cuo_men = monto * calculo_porcentaje * cuotas;
+//                abono_capital = cal_cuo_men - interes;
+//                cap_pend = monto - abono_capital;
+
+//                Console.WriteLine("||" + contador + "||" +interes+      "||" + cal_cuo_men + "||"      +abono_capital+    "||"   + cap_pend +          "||");
+
+
+//                contador = contador + 1;
+
+
+
+//            }
+//        }
+
+//    }
+
+
+//    class program
+//    {
+
+//        public static void Main(string[] args)
+//        {
+//            Prestamos t = new Prestamos();
+
+//            t.pedido();
+//            t.calcular_tabla();
+
+//        }
+//    }
+//}
+
