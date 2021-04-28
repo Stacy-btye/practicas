@@ -1,6 +1,6 @@
 using System;
 
-namespace maquinaexpendedora
+namespace calculadora_de_prestamos
 {
     public class Prestamos
     {
