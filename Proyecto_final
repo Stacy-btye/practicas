@@ -1,17 +1,25 @@
 using System;
 
-namespace calculadora_de_prestamos
+namespace maquinaexpendedora
 {
     public class Prestamos
     {
 
         int contador = 0;
-        
+
         double monto, interes, calculo_porcentaje, cal_cuo_men, abono_capital, cuotas, porcentaje = 0;
+        double interes_mensual;
+        int cantCuotas;
 
+        public double calcularCuota(double interes, int cantidad, double capital)
+        {
+            double precioCuota;
 
+            precioCuota = capital * (interes / (double)(1 - Math.Pow(1 + (double)interes, -cantidad)));
+            return precioCuota;
+        }
 
-        public void pedido ()
+        public void pedido()
         {
             Console.WriteLine("x                    Bienvenido al sistema de prestamos                      x");
             Console.WriteLine("x                                                                            x");
@@ -25,6 +33,8 @@ namespace calculadora_de_prestamos
             Console.WriteLine("x                                                                            x");
 
             cuotas = int.Parse(Console.ReadLine());
+            cantCuotas = Convert.ToInt32(cuotas);
+
 
             Console.Clear();
 
@@ -45,13 +55,10 @@ namespace calculadora_de_prestamos
             else
             {
                 Console.WriteLine("Escriba la tasa de interés que le convenga más: ");
-
-
                 Console.WriteLine(" 20%");
                 Console.WriteLine(" 15%");
                 Console.WriteLine(" 10%");
                 porcentaje = int.Parse(Console.ReadLine());
-
                 Console.Clear();
 
             }
@@ -64,36 +71,24 @@ namespace calculadora_de_prestamos
             Console.WriteLine("Cantidad prestada: " + monto);
             Console.WriteLine("Tasa de interés: " + porcentaje);
             Console.WriteLine("Cantidad de cuotas, expresada en meses: " + cuotas);
-
             Console.WriteLine("                                                   Tabla de amoratización.     ");
             Console.WriteLine("||    Periodo    ||     Intereses     ||     Cuota fija    ||     Abono a capital       ||     Capital pendiente     ||");
-
-
-            calculo_porcentaje = porcentaje / 100;
-
-            interes = monto * calculo_porcentaje*30 / 365;
-
-            cal_cuo_men = Math.Round(porcentaje - monto) / 1 * (-1 + porcentaje) * Math.Exp(-cuotas);
-
+            interes = porcentaje / 1200;
+            cal_cuo_men = monto * (interes / (double)(1 - Math.Pow(1 + (double)interes, -cantCuotas)));
+            interes_mensual = 0;
             abono_capital = cal_cuo_men - interes;
 
-            while (contador <= cuotas)
+            for (int i = 1; i <= cantCuotas; i++)
             {
-                abono_capital = cal_cuo_men - interes;
-                monto = monto - abono_capital;
 
-                Console.WriteLine("||" + contador + "||" + interes + "||" + cal_cuo_men + "||" + abono_capital + "||" + monto + "||");
-                interes = cal_cuo_men - abono_capital;
-                contador = contador + 1;
+
+                interes_mensual = Math.Round((interes * monto), 2);
+                monto = Math.Round(monto - cal_cuo_men + interes_mensual, 2);
+             Console.WriteLine("||  " + i + "   ||" + interes_mensual + "||" + cal_cuo_men + "||" + abono_capital + "  ||    " + monto + "         ||");
 
             }
         }
-
-
-       
-
     }
-
 
     class program
     {
@@ -104,8 +99,9 @@ namespace calculadora_de_prestamos
 
             t.pedido();
             t.calcular_tabla();
-           
+
 
         }
     }
 }
+
